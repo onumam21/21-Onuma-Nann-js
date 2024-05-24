@@ -43,7 +43,6 @@ function addProduct() {
 
     renderProduct(product);
 
-    // Clear form fields
     document.getElementById('fname').value = '';
     document.getElementById('price').value = '';
     document.getElementById('imageUrl').value = '';
