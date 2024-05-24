@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans leading-normal tracking-normal h-screen">
+    <div class="container mx-auto p-8 mt-8 bg-white rounded shadow-md">
+        <!-- Header Section -->
+        <section id="header" class="flex justify-between items-center mb-6">
+            <span class="font-bold text-3xl">Shopping Cart</span>
+            <div id="addproduct">
+                <h2 class="text-xl font-semibold">Add Item for selection</h2>
+            </div>
+        </section>
+        <!-- Form Section -->
+        <section id="form">
+            <div id="productName" class="mb-4 relative">
+                <label for="fname" class="block text-gray-700 text-sm font-bold mb-2">Product Name:</label>
+                <input type="text" id="fname" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Enter product name">
+            </div>
+            <div id="productPrice" class="mb-4 relative">
+                <label for="price" class="block text-gray-700 text-sm font-bold mb-2">Product Price:</label>
+                <input type="number" id="price" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Enter product price">
+            </div>
+            <div id="imageURL" class="mb-4 relative">
+                <label for="imageUrl" class="block text-gray-700 text-sm font-bold mb-2">Image URL:</label>
+                <input type="text" id="imageUrl" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Enter image URL">
+                <span id="error-message" class="text-red-500 text-sm mt-1 hidden">Please enter a valid image URL</span>
+            </div>
+            <div id="button-container" class="mb-4 mt-6">
+                <button type="button" id="button" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Create Product</button>
+            </div>
+        </section>
+    </div>
+
+    <section id="dashboard" class="container mx-auto p-8 mt-8 bg-white rounded shadow-md">
+        <h2 class="text-center text-2xl font-bold mb-6 text-black-500">Product Dashboard</h2>
+        <div id="productList" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 grid-rows-3"></div>
+    </section>
+
+    <section id="orderSection" class="container mx-auto p-8 mt-8 bg-white rounded shadow-md">
+        <h2 class="text-center text-2xl font-bold mb-6 text-black-500">Your Order</h2>
+        <div id="orderList" class="space-y-4"></div>
+        <div class="flex justify-between mt-6">
+            <button id="orderNow" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Order Now</button>
+            <button id="cancelOrder" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Cancel</button>
+        </div>
+        <div id="totalPrice" class="text-right text-xl font-bold mt-4">Total Price: ฿0.00</div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
